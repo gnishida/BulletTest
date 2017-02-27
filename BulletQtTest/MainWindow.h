@@ -18,6 +18,7 @@ public:
 	~MainWindow();
 
 public slots:
+	void onNew();
 	void onRun();
 	void onStop();
 };

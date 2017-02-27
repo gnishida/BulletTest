@@ -17,6 +17,8 @@ public:
 	~BulletSim();
 
 	void draw(QPainter& painter);
+	void init();
+	void clear();
 	void stepSimulation(float timeStep);
 };
 

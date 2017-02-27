@@ -29,6 +29,7 @@ public:
     QAction *actionExit;
     QAction *actionRun;
     QAction *actionStop;
+    QAction *actionNew;
     QWidget *centralWidget;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -47,6 +48,8 @@ public:
         actionRun->setObjectName(QStringLiteral("actionRun"));
         actionStop = new QAction(MainWindowClass);
         actionStop->setObjectName(QStringLiteral("actionStop"));
+        actionNew = new QAction(MainWindowClass);
+        actionNew->setObjectName(QStringLiteral("actionNew"));
         centralWidget = new QWidget(MainWindowClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         MainWindowClass->setCentralWidget(centralWidget);
@@ -67,6 +70,8 @@ public:
 
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuSimulation->menuAction());
+        menuFile->addAction(actionNew);
+        menuFile->addSeparator();
         menuFile->addAction(actionExit);
         menuSimulation->addAction(actionRun);
         menuSimulation->addAction(actionStop);
@@ -82,6 +87,7 @@ public:
         actionExit->setText(QApplication::translate("MainWindowClass", "Exit", 0));
         actionRun->setText(QApplication::translate("MainWindowClass", "Run", 0));
         actionStop->setText(QApplication::translate("MainWindowClass", "Stop", 0));
+        actionNew->setText(QApplication::translate("MainWindowClass", "New", 0));
         menuFile->setTitle(QApplication::translate("MainWindowClass", "File", 0));
         menuSimulation->setTitle(QApplication::translate("MainWindowClass", "Simulation", 0));
     } // retranslateUi

@@ -20,6 +20,7 @@ public:
 	Canvas(QWidget *parent = NULL);
     ~Canvas();
 
+	void init();
 	void run();
 	void stop();
 

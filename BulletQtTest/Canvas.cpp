@@ -21,6 +21,11 @@ Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 Canvas::~Canvas() {
 }
 
+void Canvas::init() {
+	sim.init();
+	update();
+}
+
 void Canvas::run() {
 	if (animation_timer == NULL) {
 		animation_timer = new QTimer(this);
